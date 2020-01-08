@@ -15,8 +15,10 @@ gem 'puma', '~> 4.1'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-# Use Stripe for payments
+# Use Stripe API for payments
 gem 'stripe'
+# Use Fast JSON API for serializing data
+gem 'fast_jsonapi'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

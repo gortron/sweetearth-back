@@ -1,6 +1,7 @@
 class ProjectController < ApplicationController
   def index
-    @projects = Project.all
-    render :json => @projects, :include => :pledges
+    projects = Project.all
+    options = { include: [:pledges] }
+    render json: ProjectSerializer.new(projects, options)
   end
 end
