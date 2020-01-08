@@ -1,7 +1,11 @@
 class ProjectController < ApplicationController
   def index
     projects = Project.all
-    options = { include: [:pledges] }
-    render json: ProjectSerializer.new(projects, options)
+    render json: ProjectSerializer.new(projects)
+  end
+
+  def show
+    project = Project.find_by(id: params[:id])
+    render json: ProjectSerializer.new(project)
   end
 end

@@ -1,7 +1,8 @@
 class PledgeController < ApplicationController
   def index
-    @pledges = Pledge.all
-    render :json => @pledges
+    pledges = Pledge.all
+    options = {include: [:user]}
+    render json: PledgeSerializer.new(pledges, options)
   end
 
   def post
