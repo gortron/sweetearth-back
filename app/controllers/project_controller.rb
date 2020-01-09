@@ -5,7 +5,7 @@ class ProjectController < ApplicationController
   end
 
   def show
-    project = Project.find_by(id: params[:id])
+    project = Project.find_by(name: params[:name].titleize)
     render json: ProjectSerializer.new(project)
   end
 end

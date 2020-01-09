@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   post '/charge', to: 'pledge#charge'
   get '/pledges', to: 'pledge#index'
   get '/projects', to: 'project#index'
-  get '/projects/:id', to: 'project#show'
+  get '/projects/:name', to: 'project#show'
   get '/users/:id', to: 'user#show'
 end

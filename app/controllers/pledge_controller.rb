@@ -10,7 +10,6 @@ class PledgeController < ApplicationController
 
   def charge
     # Testing Stripe API, should incorporate form information from the post invoked in the front-end
-    byebug
     token = params[:_json]
     charge = Stripe::Charge.create({
       amount: 1000,
