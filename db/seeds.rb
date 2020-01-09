@@ -11,6 +11,8 @@ User.delete_all
 Project.delete_all
 Pledge.delete_all
 
-user = User.create(email: 'gordon.lanza@gmail.com')
+user1 = User.create(email: 'gordon.lanza@gmail.com')
+user2 = User.create(email: 'gordon.lanza@alumni.usc.edu')
 project = Project.create(name: 'Carbon Sequestration', description: 'Remove carbon from the atmosphere.', category: 'sequestration', imgUrl: 'https://www.winrock.org/wp-content/uploads/2019/05/FEATURED-FLR_Calculator.jpg', siteUrl: 'https://carbonfund.org/')
-pledge = Pledge.create(user_id: user.id, project_id: project.id, amount: 25.00)
+project = Project.create(name: 'Reforestation', description: 'Plant trees.', category: 'reforestation', imgUrl: 'https://ensia.com/wp-content/uploads/2018/11/Feature_JapanForests_Inline.jpg', siteUrl: 'https://carbonfund.org/')
+pledge = Pledge.create(user_id: user1.id, project_id: project.id, amount: 25.00)
