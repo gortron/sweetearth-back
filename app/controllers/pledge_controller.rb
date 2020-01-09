@@ -1,3 +1,6 @@
+require 'stripe'
+Stripe.api_key = ENV["STRIPE_API_KEY"]
+
 class PledgeController < ApplicationController
   def index
     pledges = Pledge.all
@@ -5,15 +8,16 @@ class PledgeController < ApplicationController
     render json: PledgeSerializer.new(pledges, options)
   end
 
-  def post
+  def charge
     # Testing Stripe API, should incorporate form information from the post invoked in the front-end
-    Stripe.api_key = 'sk_test_esxJZSjnusctpXvR7GslOxGC00pg3FbOWf'
-
-    Stripe::PaymentIntent.create({
+    byebug
+    token = params[:_json]
+    charge = Stripe::Charge.create({
       amount: 1000,
-      currency: 'gbp',
-      payment_method_types: ['card'],
+      currency: 'usd',
+      description: 'Charge for jenny.rosen@example.com',
       receipt_email: 'jenny.rosen@example.com',
+      source: token
     })
   end
 end
