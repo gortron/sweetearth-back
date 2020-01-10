@@ -4,4 +4,8 @@ class UserController < ApplicationController
     options = {include: [:pledges, :projects]}
     render json: UserSerializer.new(user, options)
   end
+
+  def create
+    user = User.create(email: params[:email])
+  end
 end
