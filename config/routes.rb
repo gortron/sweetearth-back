@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get '/pledges', to: 'pledge#index'
   get '/projects', to: 'project#index'
   get '/projects/:name', to: 'project#show'
-  get '/users/:id', to: 'user#show'
+  # To use email as a param, we need to provide constraint to this route
+  get '/users/:email', to: 'user#show', constraints: { email: /[^\/]+/} 
 end
