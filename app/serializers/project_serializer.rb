@@ -1,6 +1,6 @@
 class ProjectSerializer
   include FastJsonapi::ObjectSerializer
+  attributes :name, :description, :category, :imgUrl, :siteUrl
   has_many :pledges
   has_many :users, through: :pledges
-  attributes :name, :description, :category, :imgUrl, :siteUrl
 end
