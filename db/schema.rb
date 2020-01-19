@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2020_01_07_135617) do
     t.string "name"
     t.string "description"
     t.string "category"
+    t.string "emissionReduction"
+    t.string "content"
     t.string "imgUrl"
     t.string "siteUrl"
     t.datetime "created_at", precision: 6, null: false

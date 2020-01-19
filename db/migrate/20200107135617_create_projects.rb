@@ -4,6 +4,8 @@ class CreateProjects < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :description
       t.string :category
+      t.string :emissionReduction
+      t.string :content
       t.string :imgUrl
       t.string :siteUrl
 
