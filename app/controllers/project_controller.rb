@@ -1,7 +1,7 @@
 class ProjectController < ApplicationController
   def index
     projects = Project.all
-    render json: ProjectSerializer.new(projects)
+    render json: ProjectSerializer.new(projects).to_serialized_json
   end
 
   def show
