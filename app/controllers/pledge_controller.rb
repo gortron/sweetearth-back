@@ -4,8 +4,7 @@ Stripe.api_key = ENV["STRIPE_API_KEY"]
 class PledgeController < ApplicationController
   def index
     pledges = Pledge.all
-    options = {include: [:user]}
-    render json: PledgeSerializer.new(pledges, options)
+    render json: PledgeSerializer.new(pledges).to_serialized_json
   end
 
   def charge
@@ -19,7 +18,7 @@ class PledgeController < ApplicationController
       amount: amount,
       currency: 'usd',
       description: 'Charge for jenny.rosen@example.com',
-      receipt_email: 'jenny.rosen@example.com',
+      receipt_email: params[:user_email],
       source: token
     })
 
