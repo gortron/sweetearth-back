@@ -52,12 +52,4 @@ project4 = Project.create(
   imgUrl: 'https://initiative20x20.org/sites/default/files/2018-12/Cordillera_Landscape.jpg', 
   siteUrl: 'https://www.vcsprojectdatabase.org/#/project_details/985')
 
-  pledge = Pledge.create(user_id: user1.id, project_id: project2.id, amount: 25.00)
-
-
-
-
-"The Katingan Project’s goal is to protect and restore 578 square miles (roughly the size of the O'ahu island in Hawaiian Archipelago) of peatland ecosystems, to offer local people sustainable sources of income, and to tackle global climate change – all based on a
-solid business model. The project area stores vast amounts of CO2, and plays a vital role in stabilizing water flows, preventing devastating peat fires, enriching soil nutrients and providing clean water. \n \n It is rich in biodiversity, being home to large populations of many high conservation value species, including some of the world’s most endangered; such as the Bornean Orangutan (Pongo pygmaeus) and Proboscis Monkey (Nasalis larvatus). It is surrounded by villages for which it supports traditional livelihoods including farming, fishing, and non-timber forest products harvesting."
-
-"REDD+ stands for reducing emissions from deforestation and forest degradation. Like similar carbon projects in this category, the team responsible for Kariba are taking a two pronged approach of (a) forest protection and (b) sustainable development. The project develops other ways to meet the needs of the local economy. Instead of felling wild trees for firewood, they are cultivating trees specifically for that purpose. Instead of clearing trees for agricultural use, they are partnering with local communities to set up apiaries and teach beekeeping. The Kariba project lies within the Zambezian biome of the Zambezi basin. The major ecosystem includes mopane and miombo woodland, and is an important wildlife area.  African elephants, lions, impalas, hippos, buffalo, leopard and crocodiles, along with a wide variety of birds, including the IUCN red list vulnerable species Southern Ground Hornbill, Lappet-faced Vulture, White-headed Vulture and White-headed Vulture are local to the region."
+  pledge = Pledge.create(user_id: user1.id, project_id: project2.id, amount: 2500)

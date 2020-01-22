@@ -17,8 +17,8 @@ class PledgeController < ApplicationController
     charge = Stripe::Charge.create({
       amount: amount,
       currency: 'usd',
-      description: 'Charge for jenny.rosen@example.com',
-      receipt_email: params[:user_email],
+      description: "Thanks #{user.email} for pledging $#{amount/100} to #{project.name}",
+      receipt_email: user.email,
       source: token
     })
 
