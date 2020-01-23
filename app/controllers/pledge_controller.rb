@@ -1,5 +1,5 @@
 require 'stripe'
-Stripe.api_key = ENV["STRIPE_API_KEY_TEST"]
+Stripe.api_key = ENV["STRIPE_API_KEY_PROD"]
 
 class PledgeController < ApplicationController
   def index
