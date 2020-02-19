@@ -13,7 +13,7 @@
 ## Stack
 
 - React front-end, createContext and useReducer pattern for global state management
-- Rails and PostgreSQL back-end, Fast_JSON serializers. [Back-end repo here.](https://github.com/gortron/sweetearth-back/)
+- Rails and PostgreSQL back-end, Fast_JSON serializers. [Front-end repo here.](https://github.com/gortron/sweetearth-front/)
 - Auth0 implemented for handling authorization
 - Stripe integration for payment handling
 - Deployed through Netlify & Heroku
